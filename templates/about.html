@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About DeepRetina | Deep Learning Based Retina Disease Detection</title>
+    <link rel="icon" href="/static/images/logo_web.png">
+
+<meta name="keywords"
+content="DeepRetina, Diabetic Retinopathy Detection, AI Eye Disease Detection, Retina Analysis, DenseNet121, Deep Learning, Medical AI, Fundus Image Analysis, Retinal Screening, Ophthalmology AI, Eye Disease Prediction, Healthcare AI, Retina Diagnosis">
+
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+
+</head>
+
+<body>
+
+  <!-- Background Glow -->
+  <div class="blur blur1"></div>
+  <div class="blur blur2"></div>
+
+
+  
+<body>
+
+    <div class="bubbles">
+
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+
+</div>
+
+  <!-- Blur Background -->
+  <div class="blur blur1"></div>
+  <div class="blur blur2"></div>
+  <div class="blur blur3"></div>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+
+  <div class="container">
+
+    <!-- Logo -->
+
+    <a class="navbar-brand logo" href="/">
+      👁 DeepRetina
+    </a>
+
+    <!-- Toggle -->
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNav"
+    >
+
+      <ul class="navbar-nav align-items-center gap-lg-3">
+
+        <li class="nav-item">
+
+          <a class="nav-link custom-link" href="/">
+            Home
+          </a>
+
+        </li>
+
+        <li class="nav-item">
+
+          <a class="nav-link custom-link" href="/contact">
+            Contact
+          </a>
+
+        </li>
+
+        {% if session.get('patient_id') %}
+
+        <li class="nav-item">
+
+          <a
+            class="nav-link custom-link"
+            href="/logout"
+          >
+            Logout
+          </a>
+
+        </li>
+
+        {% else %}
+
+        <li class="nav-item">
+
+          <a
+            class="nav-link custom-link"
+            href="/register"
+          >
+            Register
+          </a>
+
+        </li>
+
+        <li class="nav-item">
+
+          <a
+            class="nav-link custom-link"
+            href="/login"
+          >
+            Sign In
+          </a>
+
+        </li>
+
+        {% endif %}
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+  <!-- About Section -->
+  <section class="about-section">
+
+    <div class="container">
+
+      <!-- Heading -->
+      <div class="text-center mb-5">
+
+        <h1 class="main-title">
+          About DeepRetina
+        </h1>
+
+        <p class="sub-title">
+          AI-Powered Diabetic Retinopathy Detection System
+        </p>
+
+      </div>
+
+      <!-- About Content -->
+      <div class="about-card">
+
+        <h2 class="section-title">
+          Revolutionizing Eye Disease Detection
+        </h2>
+
+        <p class="about-text">
+          DeepRetina is an AI-powered diabetic retinopathy detection system
+          designed to assist in early retinal disease identification using
+          advanced deep learning technology.
+        </p>
+
+        <p class="about-text">
+          Our system analyzes retinal images with high accuracy and helps
+          provide faster diagnosis support for patients and healthcare
+          professionals.
+        </p>
+
+      </div>
+
+      <!-- Features -->
+      <div class="row g-4 mt-4">
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="feature-card">
+
+            <div class="icon">🧠</div>
+
+            <h3>Smart AI Detection</h3>
+
+            <p>
+              Advanced AI model for retinal image analysis.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="feature-card">
+
+            <div class="icon">⚡</div>
+
+            <h3>Fast Processing</h3>
+
+            <p>
+              Generate retinal analysis within seconds.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="feature-card">
+
+            <div class="icon">📊</div>
+
+            <h3>5-Class Detection</h3>
+
+            <p>
+              Detect multiple diabetic retinopathy stages.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="feature-card">
+
+            <div class="icon">🛡</div>
+
+            <h3>Clinical Accuracy</h3>
+
+            <p>
+              Reliable and high-accuracy AI predictions.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Technology -->
+      <div class="about-card mt-5">
+
+        <h2 class="section-title">
+          Technologies Used
+        </h2>
+
+        <div class="tech-list">
+
+          <span>Python</span>
+          <span>TensorFlow</span>
+          <span>OpenCV</span>
+          <span>Bootstrap</span>
+          <span>InceptionV3</span>
+          <span>Deep Learning</span>
+
+        </div>
+
+      </div>
+
+      <!-- Mission -->
+      <div class="about-card mt-5">
+
+        <h2 class="section-title">
+          Our Mission
+        </h2>
+
+        <p class="about-text">
+          Our mission is to make retinal disease screening faster,
+          smarter, and more accessible through AI-powered healthcare
+          innovation.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
