@@ -5,7 +5,6 @@ static/uploads/
 
 *.pdf
 
-dr_weights.weights.h5
-retina_validator.h5
+
 
 .vscode/

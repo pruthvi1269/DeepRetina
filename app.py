@@ -270,11 +270,14 @@ mail = Mail(app)
 # MYSQL CONNECTION
 # =========================
 
+import os
+
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="",
-    database="deepretina"
+    host=os.getenv("MYSQLHOST"),
+    user=os.getenv("MYSQLUSER"),
+    password=os.getenv("MYSQLPASSWORD"),
+    database=os.getenv("MYSQLDATABASE"),
+    port=int(os.getenv("MYSQLPORT"))
 )
 
 cursor = db.cursor(dictionary=True, buffered=True)
