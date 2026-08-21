@@ -126,7 +126,8 @@ dr_model = tf.keras.Model(
 # =========================
 
 dr_model.load_weights(
-    "dr_weights.weights.h5"
+    "dr_weights.weights.h5",
+    skip_mismatch=True
 )
 
 # =========================
